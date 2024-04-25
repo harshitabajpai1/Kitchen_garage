@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+/* variables */
+:root {
+  --main-color: #;
+  --text-color: #088178;
+  --bg-color: #e3e6f3;
+  --container-color: #1a1a1a;
+}
+
+/* logo */
+.logo {
+  font-size: 24px; 
+  font-weight: bold;
+  color: #1a1a1a; 
+  text-decoration: none;
+}
+
+
+/* login */
+
+    /* login container */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the text */
+}
+
+    /* login form */
+.login-form {
+  text-align: center;
+}
+
+    /* form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+    /* label */
+.form-group label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  text-align: left; /* Align labels to the left */
+}
+
+    /* input field */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+    /* login button */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #088178;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+    /* login button hover */
+.login-form button:hover {
+  background-color: #065a4f;
+}
+
+
+
+
+
+/* signup */
+
+/* signup container */
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the text */
+}
+
+/* signup form */
+.signup-form {
+  text-align: center;
+}
+
+/* form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* label */
+.form-group label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  text-align: left; /* Align labels to the left */
+}
+
+/* input field */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Signup Button */
+.signup-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #088178;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Signup Button Hover */
+.signup-form button:hover {
+  background-color: #065a4f;
+}
+
+
+
+/* Signup link */
+p {
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
+}
+
+p a {
+  color: #088178;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+p a:hover {
+  color: #065a4f;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+/* button banner */
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+
+body {
+  width: 100%;
+}
+
+/* navbar start */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background:  rgb(231, 231, 227);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  color: var(--text-color);
+}
+

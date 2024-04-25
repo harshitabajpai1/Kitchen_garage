@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="loginstyle.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <section id="header">
+      <img src="images/mainlogo.jpeg"style='height: 100px;' alt="logo" />
+      <a href="index.html" class="logo" style="font-size: 40px;">Kitchen Garage</a>
+      <div>
+        <ul class="navbar">
+          
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html" class="active">Signup</a></li>
+          <!-- <li>
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Signup Form -->
+    <section class="section-p1">
+      <div class="signup-container">
+        <h2>Sign Up</h2>
+        <br>
+        <form
+          action="http://127.0.0.1:5000/signup"
+          method="POST"
+          class="signup-form"
+        >
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        
+
+        <!-- google button -->
+        <!-- <div class="google-signup">
+          <div class="g-signin2" data-onsuccess="onGoogleSignUp" data-width="200" data-height="40" data-longtitle="true"></div>
+        </div>
+
+      </div> -->
+    </section>
+
+    <!-- Link to your JavaScript file -->
+    <script src="signup.js"></script>
+  </body>
+</html>
