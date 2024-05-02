@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .container form .button-container {
+            display: flex;
+            justify-content: space-between;
+            /* margin: 10px 10px 10px 10px; */
+        }
+        
+        .container form .button-container button {
+            flex: 1;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div class="container">
+    <h1>Feedback Form</h1>
+
+    <form ng-submit="submitFeedback()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ng-model="feedback.name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ng-model="feedback.email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" ng-model="feedback.message" required></textarea>
+
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="button" ng-click="clearForm()">Clear</button>
+        </div>
+    </form>
+
+    <div ng-if="feedbackResponse">
+        <p>{{ feedbackResponse }}</p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $scope.feedback = {};
+        $scope.feedbackResponse = '';
+
+        $scope.submitFeedback = function () {
+            var validEmail = validateEmail($scope.feedback.email);
+            
+            if (validEmail) {
+                $scope.feedbackResponse = 'Feedback submitted successfully!';
+            } else {
+                $scope.feedbackResponse = 'Invalid email. Please enter a valid email address.';
+            }
+        };
+
+        
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+        $scope.clearForm = function () {
+            $scope.feedback = {}; 
+            $scope.feedbackResponse = ''; 
+        };
+    });
+</script>
+
+</body>
+</html>
