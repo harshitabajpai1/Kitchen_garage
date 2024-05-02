@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen garage</title>
     <link rel="stylesheet" href="food_collection.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+  
+    <script>
+      $(document).ready(function() {
+    $('.collections').animate({left: '0'}, 1000); 
+    $('.restaurants').animate({right: '0'}, 1000);
+});
+
+    </script>
 </head>
 <body>
     
     <nav>
         <div class="navigation container">
           <div class="logo_container">
-            <img src="images/mainlogo.jpeg"style='height: 100px;' alt="logo" />
+            <img src="images/mainlogo.jpeg"style='height: 100px; border-radius: 30px' alt="logo" />
           </div>
           
           <ul class="menu-items">
@@ -25,7 +36,13 @@
           <!-- </div> -->
         </div>
       </nav>
-    <h2>Mother's Hearth</h2>
+      <div class="display">
+       
+        <h1 class="display-4">Mother's Hearth</h1>
+       
+ 
+    </div>
+    
     <main>
         
         <section class="collections">
@@ -38,32 +55,32 @@
                 </div>
            
             </div>
-            <div class="restaurant-card">
-                <img src="images/pav bhaji.jpeg" alt="Restaurant 1"  style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro2/index2.html">
+                <img src="images/pav bhaji.jpeg" alt="Restaurant 1"  style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>Marathi Home Flavors</h3>
                     <p>Location: City, Country</p>
                     <p>Rating: 4.3</p>
                 </div>
             </div>
-            <div class="restaurant-card">
-                <img src="images/lithhi chokha.jpeg" alt="Restaurant 1" style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro3/index3.html">
+                <img src="images/lithhi chokha.jpeg" alt="Restaurant 1" style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>Bihari Home Delights</h3>
                     <p>Location: City, Country</p>
                     <p>Rating: 4.6</p>
                 </div>
             </div>
-            <div class="restaurant-card">
-                <img src="images/burger.jpeg" alt="Restaurant 1" style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro4/4.html">
+                <img src="images/burger.jpeg" alt="Restaurant 1" style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>Mom's Burger Bar</h3>
                     <p>Location: City, Country</p>
                     <p>Rating: 3.9</p>
                 </div>
             </div>
-            <div class="restaurant-card">
-                <img src="images/lassi.jpg" alt="Restaurant 1"  style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro5/5.html">
+                <img src="images/lassi.jpg" alt="Restaurant 1"  style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>Punjabi Home Kitchen</h3>
                     <p>Location: City, Country</p>
@@ -75,24 +92,24 @@
         </section>
         <section class="restaurants">
             
-            <div class="restaurant-card">
-                <img src="images/dosa pic1.webp" alt="Restaurant 1"  style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro6/6.html">
+                <img src="images/dosa pic1.webp" alt="Restaurant 1"  style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>The Dosa Den</h3>
                     <p>Location: City, Country</p>
                     <p>Rating: 4.5</p>
                 </div>
             </div>
-            <div class="restaurant-card">
-                <img src="images/dal chawal.jpeg" alt="Restaurant 1"  style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro7/7.html">
+                <img src="images/dal chawal.jpeg" alt="Restaurant 1"  style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>UP Home Delicacies</h3>
                     <p>Location: City, Country</p>
                     <p>Rating: 4.7</p>
                 </div>
             </div>
-            <div class="restaurant-card">
-                <img src="images/chai1.jpg" alt="Restaurant 1"  style="height: 150px;">
+            <div class="restaurant-card"><a rel="noopener" target="_blank" href="restro/restro8/8.html">
+                <img src="images/chai1.jpg" alt="Restaurant 1"  style="height: 150px;"></a>
                 <div class="restaurant-details">
                     <h3>Mom's Chai Corner</h3>
                     <p>Location: City, Country</p>
@@ -121,5 +138,6 @@
     <footer>
         <p>&copy; 2024 Kithcen garage</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
