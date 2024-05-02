@@ -59,11 +59,23 @@ nav {
     transition: color 0.3s ease-in-out;
   }
 
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
 
 
-h2{
-    padding:10px;
-    text-align: center;
+.display{
+  padding:10px;
+  text-align: center;
+  animation: heartbeat 5s infinite;
+
+}
+.display:hover{
+    
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
 }
 
 main {
@@ -97,31 +109,31 @@ main {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    display: flex; /* Use flexbox layout */
+    display: flex; 
 }
 
 .restaurant-card img {
-    width: 150px; /* Set the width of the image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Apply border radius to image */
-    margin-right: 10px; /* Add some space between image and details */
+    width: 150px; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-right: 10px; 
 }
 
 .restaurant-details {
-    flex: 1; /* Take up remaining space */
+    flex: 1; 
 }
 
 .restaurant-details h3 {
-    margin-top: 0; /* Remove default margin */
+    margin-top: 0; 
 }
 .restaurant-card {
-    transition: transform 0.3s ease; /* Apply transition to transform property with ease */
+    transition: transform 0.3s ease; 
 }
 
 .restaurant-card:hover {
-    transform: scale(1.1); /* Scale up the card when hovered over */
+    transform: scale(1.1);
     
-    background-color: white /* Semi-transparent black overlay */
+    background-color: white;
     
 }
 
@@ -129,4 +141,35 @@ footer {
     background-color: #f8f9fa;
     text-align: center;
     padding: 10px;
+}
+.card:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease; 
+}
+.collections {
+  gap: 10px;
+  padding: 10px 20px; 
+  z-index: 1;
+  max-width: 600px; 
+  margin: auto; 
+  position: relative; 
+  left: -100%;  
+
+}
+
+.restaurants {
+  gap: 10px;
+  padding: 10px 20px; 
+  z-index: 1;
+  max-width: 600px; 
+  margin: auto; 
+  position: relative; 
+  right: -100%; 
+}
+
+
+.slide-in {
+  right: 0;
+  transition: right 1s ease; 
+
 }
